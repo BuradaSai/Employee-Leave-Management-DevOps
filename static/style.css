@@ -1,0 +1,179 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    background: #1d4ed8;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 22px;
+    margin: 0;
+}
+
+header a {
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.login-card {
+    max-width: 440px;
+    margin: 70px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px #00000012;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0000000c;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 16px;
+    margin-top: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.88;
+}
+
+.login-card button {
+    width: 100%;
+}
+
+.approve {
+    background: #15803d;
+    margin-right: 5px;
+}
+
+.reject {
+    background: #dc2626;
+}
+
+.demo {
+    margin-top: 25px;
+    padding: 14px;
+    background: #eff6ff;
+    border-radius: 8px;
+}
+
+.message {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #eff6ff;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.approved {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+@media (max-width: 600px) {
+    .login-card {
+        margin: 25px 15px;
+        padding: 22px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    header {
+        padding: 18px;
+    }
+}

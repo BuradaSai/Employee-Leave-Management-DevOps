@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="login-card">
+        <h1>Leave Management System</h1>
+        <p>Sign in to manage your leave requests.</p>
+
+        {% with messages = get_flashed_messages() %}
+          {% for message in messages %}
+            <p class="message">{{ message }}</p>
+          {% endfor %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('login') }}">
+            <label for="username">Username</label>
+            <input id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        
+        <div class="demo">
+            <strong>Demo Accounts</strong>
+            <p>Employee 1: employee1 / emp1123</p>
+            <p>Employee 2: employee2 / emp2123</p>
+            <p>Employee 3: employee3 / emp3123</p>
+            <p>Manager: manager / mgr123</p>
+        </div>
+
+    </main>
+</body>
+</html>
