@@ -19,15 +19,23 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                bat 'python -m pip install -r requirements.txt'
-            }
-        }
+        
+stage('Install Dependencies') {
+    steps {
+        bat '"C:/Users/saibu/AppData/Local/Programs/Python/Python312/python.exe" -m venv .venv'
+        bat '.venv/Scripts/python.exe -m pip install -r requirements.txt'
+    }
+}
+
 
         stage('Unit Tests') {
             steps {
-                bat 'python -m pytest tests/test_app.py -v'
+               
+bat '''
+    set APP_URL=http://127.0.0.1:5001
+    .venv/Scripts/python.exe -m pytest tests/test_selenium.py -v
+'''
+
             }
         }
 

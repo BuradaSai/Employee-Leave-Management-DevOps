@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 leave.db
 .env
+.venv/
